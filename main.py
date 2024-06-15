@@ -56,7 +56,8 @@ actual_prices = test_data['Close'].values
 
 total_dataset = pd.concat((datetime['Close'], test_data['Close']), axis=0)
 
-model_inputs = total_dataset[len(total_datase - len(test_voice - prediction_days:]).value)]
+#model_inputs = total_dataset[len(total_datase - len(test_voice - prediction_days:]).value)]
+model_inputs = total_dataset[len(total_dataset) - len(test_voice) - prediction_days:].value
 model_inputs = model_inputs.reshape(-1, 1)
 model_inputs = scaled_data.transform(model_inputs)
 
@@ -75,7 +76,7 @@ protection_days = scaler.inverse_transform(protection_days)
 
 #Plot the Predictions
 plt.plot(actual_prices, color="black", label=f"Actual {company} Price")
-plt.plot(predicted_prices, color='green', label=f"Predicted" {company} Price")
+plt.plot(prdicted_prices, color='green', label=f"Predicted {company} Price")
 plt.title(f"{company} Share Price")
 plt.xlabel('Time')
 plt.ylabel(f'{company} Share Price')
