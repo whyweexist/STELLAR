@@ -1,4 +1,4 @@
-# Kuber is a stock market analyzer
+# Kuber A Stock Market analyzer
 To run the app first download all the required modules and then write streamlit run myapp.py in the terminal of your code editor.
 
 ## Stock Market
